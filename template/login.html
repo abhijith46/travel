@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+</head>
+<style>form {
+text-align:centre;
+      margin-left: 30%;
+    margin-right:70%;
+    width: 100%;
+
+
+}</style>
+<body><form action="login" method="post" >
+    {% csrf_token %}
+    Username:<input type="text" name="username" placeholder="username"><br>
+   <br> Password:<input type="password" name="password" placeholder="password"><br>
+    <br>            <input type="submit">
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
